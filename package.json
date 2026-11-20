@@ -1,0 +1,65 @@
+{
+  "name": "@bloomscorp/imagine.js",
+  "version": "0.1.0",
+  "description": "Generate images with Imagine from the browser: short-lived session tokens, retries and job watching, no dependencies.",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/imagine.global.js",
+  "jsdelivr": "./dist/imagine.global.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify:package": "node scripts/verify-package.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "imagine",
+    "bloomscorp",
+    "blooms-ai",
+    "image-generation",
+    "ai-images",
+    "browser"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Bloomscorp",
+  "homepage": "https://github.com/bloomscorp/imagine.js",
+  "bugs": {
+    "url": "https://github.com/bloomscorp/imagine.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bloomscorp/imagine.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}
